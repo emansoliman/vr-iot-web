@@ -1,0 +1,18 @@
+<app-dashboard style="float: left;"></app-dashboard>
+
+    <ul   style="margin-top: 15%; float: right; margin-right:23%;">
+        <li style="margin-right: 2px;" class="btn btn-danger" *ngFor="let item of items| async">
+          {{ item.name }}
+          {{item.id}}
+          
+        </li>
+      </ul>
+      
+    <fusioncharts style="float: right;margin-right: 17%;"
+          width="700"
+          height="300"
+          type="column2d"
+          dataFormat="json"
+          [dataSource]="data" >
+        </fusioncharts>
+        <app-home></app-home>

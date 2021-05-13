@@ -1,0 +1,50 @@
+<app-dashboard></app-dashboard>
+<body style=" background-image: url('../../assets/images/banner_bg.png');
+background-repeat: no-repeat;
+background-size: cover" >
+<div class="form-fav"  >
+    <form class="ui form"  [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="field">
+           <input style="width: 30%; margin-left: 35%; margin-top:15%;"
+           type="text"
+           name="name"
+           placeholder="Place Name"
+           formControlName="name"
+           />
+     </div>
+     <div class="field">
+          <input style="width: 30%; margin-left: 35%;"
+          type="text"
+          name="Email address"
+          placeholder="Email address"
+         formControlName="email"
+      />
+    </div>
+    <div class="field">
+         <textarea style="width: 30%; margin-left: 35%;"
+         type="text"
+         name="Comment"
+         placeholder="Comment"
+         formControlName="comment"></textarea>
+         
+    </div>
+    <h2 style=" color: white; margin-left: 45%; font-size: 28px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">USer Rating</h2>
+    <div >
+   <label style=" margin-left: 40%; color: white;">
+    <input formControlName="feedback" type="radio" name="experience" id="radio_experience" value="bad"  >
+                                             Bad</label>
+     <label style=" margin-left: 5%; color: white;">
+    <input formControlName="feedback" type="radio" name="experience" id="radio_experience" value="Average"  >Average</label>
+    <label style="  margin-left: 5%; color: white;">
+     <input  formControlName="feedback"type="radio" name="experience" id="radio_experience" value=" Good"  > Good</label>
+
+    </div>
+
+                                             
+    <button class="ui inverted violet button" type="submit"  style=" margin-left:37%; width: 25%; margin-top: 15px;">
+            <i class="fas fa-star"></i> submit
+    </button>
+ </form>
+</div>
+
+</body>

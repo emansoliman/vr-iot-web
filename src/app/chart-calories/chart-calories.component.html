@@ -1,0 +1,21 @@
+<app-dashboard style="float: left;"></app-dashboard>
+
+
+<ul   style="margin-top: 15%; float: right; margin-right:17%;">
+    <li style="margin-right: 2px;" class="btn btn-primary" *ngFor="let item of products$| async">
+      {{ item.key }}
+      {{ item.payload}}
+      
+    </li>
+  </ul>
+  
+
+<fusioncharts style="float: right; margin-right: 12%;"
+      width="700"
+      height="300"
+      type="column2d"
+      dataFormat="json"
+      [dataSource]="data" >
+    </fusioncharts>
+    <app-home></app-home>
+  

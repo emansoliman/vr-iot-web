@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor="let item of products$| async">
+      {{ item.key }}
+      {{ item.payload}}
+      
+    </li>
+  </ul>
+  <p>chart</p>
+<fusioncharts
+      width="700"
+      height="300"
+      type="column2d"
+      dataFormat="json"
+      [dataSource]="data" >
+    </fusioncharts>
+  
